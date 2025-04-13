@@ -47,6 +47,14 @@ modinfo /usr/lib/modules/$(uname -r)/updates/dkms/zfs.ko | grep ^version
 --- 2.3.1-1
 ```
 
+In case the last step's modinfo command shows no version or the zfs.ko module is not in that folder, execute 
+
+```
+dkms autoinstall -k $(uname -r)
+```
+
+and try the last command block again
+
 ###### reboot:
 reboot ...
 
